@@ -6,10 +6,12 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@astrojs/renderer-svelte": "^0.2.0",
     "astro": "^0.21.0",
-    "@astrojs/renderer-svelte": "^0.2.0"
+    "husky": "^7.0.4"
   }
 }
