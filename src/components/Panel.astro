@@ -11,7 +11,7 @@ const { position = "left", title = null } = Astro.props
 <style lang="scss">
 article {
   border: 1px solid var(--color-text);
-  border-radius: 6px;
+  border-radius: var(--box-radius);
   background-color: var(--color-text-bg);
   color: var(--color-text);
 }
@@ -21,7 +21,29 @@ article {
   padding: 1em;
 }
 
+.center.columns {
+  .content {
+    @media all and (min-width: 900px) {
+      max-width: max-content;
+      columns: 2 auto;
+      column-gap: 2rem;
+    }
+
+    @media all and (min-width: 1500px) {
+      max-width: max-content;
+      columns: 3 auto;
+      column-gap: 2rem;
+    }
+  }
+}
+
 #hero {
   color: orangered;
+}
+
+#intro {
+  .content {
+    padding-top: var(--vw12);
+  }
 }
 </style>

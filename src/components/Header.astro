@@ -1,24 +1,27 @@
-<div>
-    <h1 data-splitting>Olivier Cardinaux</h1>
-    <h2>ruechappe.fr</h2>
+---
+import HomeIcon from "./svg/home.svg.astro"
+import WorldIcon from "./svg/world.svg.astro"
+---
+<div class="logo">
+  <HomeIcon />
+  <h2>ruechappe.fr</h2>
+  <WorldIcon />
 </div>
 
 <style lang="scss">
-h1 {
-  font-family: Quattrocento, serif;
-  color: darkseagreen;
-  font-size: var(--font1);
-  font-weight: 400;
-
-  > :nth-child(3) {
-    font-weight: 700;
-  }
+.logo {
+  display: flex;
 }
 
 h2 {
   font-family: "Quattrocento Sans", serif;
   font-style: italic;
   color: burlywood;
+
+  // Adjust to get even with logo icons, although
+  // TODO: I'm probably going to put those in a before
+  // pseudo.
+  line-height: 1.1;
 }
 </style>
 

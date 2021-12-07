@@ -11,11 +11,13 @@
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.2.2",
+    "@prettier/plugin-xml": "^1.1.0",
     "astro": "^0.21.10",
     "autoprefixer": "^10.4.0",
     "husky": "^7.0.4",
     "postcss": "^8.3.11",
     "postcss-html": "^1.2.0",
+    "prettier": "^2.5.1",
     "sass": "^1.43.4",
     "stylelint": "^14.1.0",
     "stylelint-config-html": "^1.0.0",

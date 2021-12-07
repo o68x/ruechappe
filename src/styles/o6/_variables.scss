@@ -4,7 +4,8 @@
   --color-text: #1f2937;
   --color-text-bg: #f3f4f6;
   --color-fancy-bg: rgb(254 252 113);
-
+  --box-radius: 2px;
+  --vw12: 8.333vw; // 8.33vw is 1/12 de 100vw, bcz of 12 cols grid
 }
 
 body {

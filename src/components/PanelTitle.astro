@@ -1,0 +1,35 @@
+<div id="title" class="content left">
+  <slot />
+</div>
+
+<style lang="scss">
+#title {
+  display: block;
+  flex-direction: row;
+  border: 1px solid var(--color-text);
+  border-radius: var(--box-radius);
+  z-index: 10;
+  padding: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-fancy-bg);
+  }
+
+  :global(.title-item) {
+    // background-color: var(--color-fancy-bg);
+    text-align: center;
+    line-height: 1.2;
+
+    &:last-of-type {
+      color: red;
+    }
+  }
+}
+</style>
