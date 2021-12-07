@@ -1,0 +1,17 @@
+---
+import Head from './../components/DefaultHead.astro';
+
+const { title, description, permalink, current } = Astro.props
+---
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    <Head
+      title={ title } 
+      description={ description } 
+      permalink={ permalink } />
+  </head>
+  <!-- Here comes a body -->
+  <slot />
+</html>
+

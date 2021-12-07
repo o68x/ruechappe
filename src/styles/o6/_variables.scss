@@ -1,6 +1,16 @@
-$my-color: green;
-$another-color: red;
+:root {
+  --my-color: orange;
+  --font1: clamp(2rem, -0.4742rem + 6.1856vw, 2.75rem);
+  --color-text: #1f2937;
+  --color-text-bg: #f3f4f6;
+  --color-fancy-bg: rgb(254 252 113);
 
-a:hover {
-  color: $another-color;
+}
+
+body {
+  @media (prefers-color-scheme: dark) {
+    --color-text: #f3f4f6;
+    --color-text-bg: #1f2937;
+    --color-fancy-bg: rgba(254 252 113 / 50%);
+  }
 }

@@ -1,4 +1,4 @@
-@use "o6/variables" as *;
+@use "o6/variables";
 
 :root {
   font-family:
@@ -32,35 +32,6 @@
     "Courier New",
     courier,
     monospace;
-  --color-light: #f3f4f6;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-light: #1f2937;
-  }
-}
-
-body {
-  padding: 4rem 3rem;
-  width: 100%;
-  min-height: 100vh;
-  display: grid;
-  justify-content: center;
-  background: #f9fafb;
-  color: #111827;
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background: #111827;
-    color: #f9fafb;
-  }
-}
-
-a {
-  color: $my-color;
-  background-color: $another-color;
 }
 
 h2 {
