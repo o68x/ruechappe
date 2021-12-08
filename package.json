@@ -51,10 +51,12 @@
       }
     ],
     "ignoreFiles": [
-      "dist/**/*"
+      "dist/**/*",
+      "node_modules/**/*"
     ]
   },
   "dependencies": {
+    "rfs": "^9.0.6",
     "splitting": "^1.0.6"
   }
 }
