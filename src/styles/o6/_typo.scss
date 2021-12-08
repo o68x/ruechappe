@@ -1,3 +1,7 @@
+// See https://github.com/twbs/rfs
+$rfs-base-value: 0.875rem;
+$rfs-factor: 10;
+
 @import "../../../node_modules/rfs/scss";
 
 :root {
@@ -8,6 +12,7 @@
     sans-serif;
 
   // RFS includes
+  @include rfs(0.875rem, --scale-3); // very small stuff 16px
   @include rfs(1rem, --scale-2); // very small stuff 16px
   @include rfs(1.125rem, --scale-1); // small stuff 18px
   @include rfs(1.3125rem, --scale0); // p font 21px
@@ -29,6 +34,7 @@ body {
 
 h1 {
   font-size: var(--scale4);
+  font-weight: 700;
 }
 
 h2 {
