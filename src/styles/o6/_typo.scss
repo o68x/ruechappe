@@ -1,8 +1,4 @@
-// See https://github.com/twbs/rfs
-$rfs-base-value: 0.875rem;
-$rfs-factor: 10;
-
-@import "../../../node_modules/rfs/scss";
+@use "../../../node_modules/rfs/scss" as *;
 
 :root {
   font-family:
@@ -20,16 +16,11 @@ $rfs-factor: 10;
   @include rfs(2.332rem, --scale2); // h3 font
   @include rfs(3.109rem, --scale3); // h2 font
   @include rfs(4.144rem, --scale4); // h1.huge font
-  
-
-  // font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.3125rem);
-
-  --font1: clamp(2rem, -0.4742rem + 6.1856vw, 2.75rem);
-  --font2: clamp(1.5rem, 1rem + 1.25vw, 2rem);
 }
 
 body {
-  font-size: var(--scale0);
+  font-size: var(--scale-1);
+  line-height: 1.6;
 }
 
 h1 {
@@ -50,4 +41,5 @@ h3 {
 .teasing {
   font-weight: 300;
   font-size: var(--scale1);
+  line-height: 1.4;
 }

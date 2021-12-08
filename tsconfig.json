@@ -1,9 +1,3 @@
 {
-  "moduleResolution": "node",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["components/*"]
-    }
-  }
+  "moduleResolution": "node"
 }

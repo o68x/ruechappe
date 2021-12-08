@@ -1,6 +1,9 @@
+@use "../../../node_modules/rfs/scss" as *;
+
 :root {
   --box-radius: 2px;
   --vw12: 8.333vw; // 8.33vw is 1/12 de 100vw, bcz of 12 cols grid
+  --grid-gap: calc(0.5rem + 2vw);
 }
 
 // TODO: Use a clamp function like this to adjust gaps etc.

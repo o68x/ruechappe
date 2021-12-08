@@ -11,22 +11,22 @@
 
   onMount(() => {
     darkMode = matchMedia(SCHEME).matches;
-    console.log(darkMode);
+    // console.log(darkMode);
     bodyClasses = document.body.classList;
     currentTheme();
   });
 
   function currentTheme() {
-    // console.log("current theme ". darkMode);
     if (darkMode) {
       button = bodyClasses.contains(THEME.light) ? ICON.light : ICON.dark;
     } else {
       button = bodyClasses.contains(THEME.dark) ? ICON.dark : ICON.light;
     }
+    console.log("current scheme: " + darkMode);
   }
 
   function handleChange(e) {
-    // console.log(bodyClasses, darkMode);
+    // console.log(darkMode);
     if (darkMode) {
       bodyClasses.toggle(THEME.light);
     } else {
@@ -53,7 +53,7 @@
 
 <!-- Get current state with binding or what? -->
 <span on:click={handleChange}>
-  {#if button === "dark" }
+  {#if button === 'dark' }
     <svg class="icon"><use xlink:href="#rise" /></svg>
   {:else}
     <svg class="icon"><use xlink:href="#sleep" /></svg>

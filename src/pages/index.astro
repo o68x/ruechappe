@@ -2,10 +2,11 @@
 import { Markdown } from 'astro/components';
 
 import Html from "../layouts/default.astro";
-import Header from '../components/Header.astro';
+import Header from '../components/DefaultHeader.astro';
 import PanelTitle from '../components/PanelTitle.astro';
 import Panel from '../components/Panel.astro';
 import PanelFull from '../components/PanelFull.astro';
+import Footer from '../components/DefaultFooter.astro';
 
 let title = 'Olivier Cardinaux, rue Chappe, Paris';
 let description = 'Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.';
@@ -70,53 +71,25 @@ let permalink = 'https://ruechappe.fr/';
     </div>
   </Panel>
 
-  <footer>
-    <a href="#">oops</a>
+  <footer class="full">
+    <Footer />
   </footer>
 </body>
 
 </Html>
 
 <style lang="scss">
-// This layout allows for full-bleed
-
 body {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(var(--vw12), maxcontent);
-  gap: 1rem;
-
-  & > :global(*) {
-    grid-column: 2 / -2;
-  }
-
-  & > :global(.full) {
-    grid-column: 1 / -1;
-  }
-
   background-color: var(--color-fancy-bg);
-}
 
-/* stylelint-disable-next-line no-descending-specificity */
-:global(.center) {
-  grid-column: 2 / -2;
-}
+  :global(#title) {
+    grid-column: 2 / 7;
+    grid-row: 2;
+    transform: translateY(calc((var(--vw12) / 2) + 1rem));
+  }
 
-:global(.left) {
-  grid-column: 2 / 8;
-}
-
-:global(.right) {
-  grid-column: -8 / -2;
-}
-
-:global(#title) {
-  grid-column: 2 / 7;
-  grid-row: 2;
-  transform: translateY(calc((var(--vw12) / 2) + 1rem));
-}
-
-:global(#intro) {
-  grid-row: 3;
+  :global(#intro) {
+    grid-row: 3;
+  }
 }
 </style>

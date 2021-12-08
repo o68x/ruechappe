@@ -1,0 +1,45 @@
+---
+import { Markdown } from 'astro/components';
+
+import Html from "../layouts/default.astro";
+import Header from '../components/DefaultHeader.astro';
+import PanelPageTitle from '../components/PanelPageTitle.astro';
+import PanelTitle from '../components/PanelTitle.astro';
+import Panel from '../components/Panel.astro';
+import PanelFull from '../components/PanelFull.astro';
+import Footer from '../components/DefaultFooter.astro';
+
+let title = 'Olivier Cardinaux, rue Chappe, Paris';
+let description = 'Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.';
+let permalink = 'https://ruechappe.fr/';
+---
+<Html title={ title } description = { description } permalink = { permalink } >
+
+<body>
+  <header class="full">
+    <Header />
+  </header>
+  <PanelPageTitle position="center">
+    <div class="title-item"><h1>à PROPOS</h1></div>
+  </PanelPageTitle>
+  <Panel position="stretch">
+    <div slot="content">
+      <p class="teasing">Les projets <span id="num" data-splitting>(numériques)</span> prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.</p>
+    </div>
+  </Panel>
+
+  <div>
+  <p>OMG!</p>
+  </div>
+  <footer class="full">
+    <Footer />
+  </footer>
+</body>
+
+</Html>
+
+<style lang="scss">
+body {
+  background-color: var(--color-fancy-bg);
+}
+</style>

@@ -1,0 +1,45 @@
+---
+const { position = "center", title = null } = Astro.props
+const setClass = position
+---
+<div id="title" class="center">
+  <slot />
+</div>
+
+<style lang="scss">
+#title {
+  position: relative;
+  justify-self: stretch;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color-text);
+  border-radius: var(--box-radius);
+  z-index: 10;
+  padding: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-fancy-bg);
+  }
+
+  :global(.title-item) {
+    // background-color: var(--color-fancy-bg);
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+    width: 100%;
+    color: var(--color-accent);
+
+    &:first-of-type {
+      color: var(--color-text);
+    }
+  }
+}
+</style>

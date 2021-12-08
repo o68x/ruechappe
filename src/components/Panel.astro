@@ -3,7 +3,6 @@ const { position = "left", title = null } = Astro.props
 
 ---
 <article id={ title } class={ position }>
-  <div class="shape"></div>
   <div class="content">
     <slot name="content"/>
   </div>
@@ -43,17 +42,6 @@ article {
 }
 
 #intro {
-  .shape {
-    width: 100px;
-    height: 150px;
-    float: left;
-    shape-outside: polygon(0 0, 0 7.6vh, 11vw 6vw, 100% 0%);
-  }
-
-  .content {
-    position: relative;
-
-    // padding-top: var(--vw12);
-  }
+  padding-top: calc(var(--vw12) * 0.3);
 }
 </style>
