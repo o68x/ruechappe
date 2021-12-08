@@ -11,7 +11,7 @@ const { position = "left", title = null } = Astro.props
 <style lang="scss">
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
   margin: 0 calc(var(--vw12) / 3);
 
   & > :global(*) {
