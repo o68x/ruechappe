@@ -27,9 +27,9 @@ onMount(() => {
 ];
 
 function setTheme(target) {
-  if (target == 'dark') {
-    root.setAttribute("data-theme", theme);
-    localStorage.setItem('theme', theme);
+  if (target == 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    root.setAttribute("data-theme", "dark");
+    localStorage.setItem('theme', 'dark');
   } else {
     root.removeAttribute("data-theme");
     localStorage.removeItem('theme');
