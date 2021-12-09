@@ -38,3 +38,10 @@ body {
     align-self: end;
   }
 }
+
+#symbols {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+}

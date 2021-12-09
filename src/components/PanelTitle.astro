@@ -36,8 +36,15 @@ const setClass = position;
       width: 100%;
       color: var(--color-accent);
 
-      &:first-of-type {
-        color: var(--color-text);
+      > h1 {
+        color: var(--color-fancy-bg); // rgb(0 0 0 / 0.05);
+        -webkit-text-stroke: 1px var(--color-text);
+        text-shadow:
+          2px 2px 0 #000,
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
       }
     }
   }

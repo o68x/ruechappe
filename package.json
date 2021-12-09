@@ -56,6 +56,7 @@
     ]
   },
   "dependencies": {
+    "js-cookie": "^3.0.1",
     "prettier-plugin-astro": "^0.0.11",
     "rfs": "^9.0.6",
     "splitting": "^1.0.6"
