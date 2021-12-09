@@ -1,10 +1,3 @@
-body {
-  --color-text-black: #1f2937;
-  --color-text-white: #f3f4f6;
-  --color-bg-black: #1f2937;
-  --color-bg-white: #f3f4f6;
-}
-
 @mixin light-colors {
   --color-text: var(--color-text-black);
   --color-text-bg: var(--color-bg-white);
@@ -18,19 +11,18 @@ body {
 }
 
 body {
+  --color-text-black: #1f2937;
+  --color-text-white: #f3f4f6;
+  --color-bg-black: #1f2937;
+  --color-bg-white: #f3f4f6;
+
   @include light-colors;
 
   --color-accent: orange;
+}
 
-  &.dark-theme {
+:root[data-theme="dark"] {
+  body {
     @include dark-colors;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    @include dark-colors;
-
-    &.light-theme {
-      @include light-colors;
-    }
   }
 }

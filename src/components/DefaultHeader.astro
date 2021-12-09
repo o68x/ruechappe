@@ -24,7 +24,7 @@ import ThemeToggle from "./ThemeToggle.svelte";
         </li>
       </ul>
     </nav>
-    <ThemeToggle client:load />
+    <ThemeToggle client:idle />
   </div>
 </div>
 
@@ -47,7 +47,11 @@ import ThemeToggle from "./ThemeToggle.svelte";
   .logo {
     font-size: 32px;
     font-weight: 900;
-    color: var(--color-accent);
+
+    > a {
+      letter-spacing: 0.1em;
+      opacity: 0.66;
+    }
   }
 
   #sitenav {
