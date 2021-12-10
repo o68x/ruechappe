@@ -1,19 +1,19 @@
 @mixin light-colors {
-  --color-text: var(--color-text-black);
-  --color-text-bg: var(--color-bg-white);
+  --text-1: var(--text-1-black);
+  --text-1-bg: var(--color-bg-white);
   --color-fancy-bg: rgb(254 252 113);
   --color-fancy-bg-darker: rgba(254 252 113 / 20%);
 }
 
 @mixin dark-colors {
-  --color-text: var(--color-text-white);
-  --color-text-bg: var(--color-bg-black);
+  --text-1: var(--text-1-white);
+  --text-1-bg: var(--color-bg-black);
   --color-fancy-bg: rgba(254 252 113 / 50%);
 }
 
 body {
-  --color-text-black: #1f2937;
-  --color-text-white: #f3f4f6;
+  --text-1-black: #1f2937;
+  --text-1-white: #f3f4f6;
   --color-bg-black: #1f2937;
   --color-bg-white: #f3f4f6;
 

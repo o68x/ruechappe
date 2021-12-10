@@ -16,7 +16,7 @@ let permalink = "https://ruechappe.fr/";
 ---
 
 <Html title={title} description={description} permalink={permalink}>
-  <body id="fuck" class="loading fuck">
+  <body id="fuck" class="loading" data-shit>
     <header class="full">
       <Header />
     </header>
@@ -30,7 +30,7 @@ let permalink = "https://ruechappe.fr/";
     <Panel position="right" title="intro">
       <div slot="content">
         <p class="teasing">
-          Les projets <span id="num" data-splitting>(numériques)</span> prennent
+          Les projets (numériques) prennent
           tout leur sens lorsque leurs concepteurs comprennent comment ils seront
           construits, et pourquoi. Tout comme un architecte comprend comment une
           structure est créée, il devrait en être de même pour le web.
@@ -63,12 +63,12 @@ let permalink = "https://ruechappe.fr/";
       </div>
       <div slot="content">
         <Markdown>
-          Les projets <span id="num" data-splitting>(numériques)</span> prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.
+          Chaque frappe de touche (Fig 3) est soigneusement étudiée car j’essaie d’écrire un code simple et résistant. L’amélioration progressive est la philosophie avec laquelle je cherche à travailler.
         </Markdown>
       </div>
       <div slot="content">
         <Markdown>
-          Chaque frappe de touche (Fig 3) est soigneusement étudiée car j’essaie d’écrire un code simple et résistant. L’amélioration progressive est la philosophie avec laquelle je cherche à travailler.
+          Les projets prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.
         </Markdown>
       </div>
     </PanelFull>
@@ -76,7 +76,7 @@ let permalink = "https://ruechappe.fr/";
     <Panel position="center columns">
       <div slot="content">
         <Markdown>
-          Les projets <span id="num" data-splitting>(numériques)</span> prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.
+          Les projets prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.
 
           Tout aussi important, j'insiste pour donner de l'importance à l'autre versant : comprendre non seulement pourquoi, mais pour qui le projet est conçu. Il s'agit de s'adapter aux personnes, de leur rendre la vie plus facile, du moins ne pas la compliquer. J’aime collaborer, donner des conseils et aider à repousser les limites pour construire des projets qui attirent l’attention, sans sacrifier la simplicité d’utilisation.
         </Markdown>
@@ -89,9 +89,9 @@ let permalink = "https://ruechappe.fr/";
   </body>
 </Html>
 
-<style lang="scss">
+<style>
   body {
-    background-color: var(--color-fancy-bg);
+    background-color: var(--yellow-2);
 
     :global(#title) {
       grid-column: 2 / 6;
@@ -103,4 +103,14 @@ let permalink = "https://ruechappe.fr/";
       grid-row: 3;
     }
   }
+
+</style>
+
+<style global>
+  [data-theme="dark"] {
+    & body {
+      background-color: var(--yellow-8);
+    }
+  }
+
 </style>

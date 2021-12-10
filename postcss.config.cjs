@@ -1,3 +1,10 @@
+const postcssImport = require('postcss-import')
+const postcssNesting = require('postcss-nesting')
+
 module.exports = {
-  plugins: [require('autoprefixer')],
+  plugins: [
+    postcssImport({ path: ['src'] }),
+    postcssNesting(),
+    // require('autoprefixer'),
+  ],
 };

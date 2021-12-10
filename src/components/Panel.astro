@@ -9,12 +9,14 @@ const { position = "left", title = null } = Astro.props
   </div>
 </article>
 
-<style lang="scss">
+<style>
+@import "panel.css";
+
 article {
-  border: 1px solid var(--color-text);
-  border-radius: var(--box-radius);
-  background-color: var(--color-text-bg);
-  color: var(--color-text);
+  border: 1px solid var(--text-1);
+  border-radius: var(--radius-2);
+  /* background-color: var(--text-1-bg); */
+  color: var(--text-1);
 }
 
 .content {
