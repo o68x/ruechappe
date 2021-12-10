@@ -1,8 +1,11 @@
 @use "../../../node_modules/rfs/scss" as *;
 
+// TODO: probably set inline as link (faster load?)
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400;700;900&display=swap");
+
 :root {
   font-family:
-    Moriston,
+    Bitter,
     -apple-system,
     "Segoe UI",
     sans-serif;
@@ -21,11 +24,25 @@
 body {
   font-size: var(--scale-1);
   line-height: 1.6;
+  font-weight: 400;
+
+  // Please Stop "Fixing" Font Smoothing
+  // https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // text-rendering: optimizeLegibility;
 }
 
 h1 {
   font-size: var(--scale4);
-  font-weight: 700;
+  font-weight: 900;
+}
+
+.logo {
+  font-family: Piazzolla, serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
 }
 
 h2 {
@@ -34,12 +51,32 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: var(--scale2);
 }
 
-.teasing {
-  font-weight: 300;
+h4 {
+  font-weight: 500;
   font-size: var(--scale1);
-  line-height: 1.4;
+}
+
+article {
+  font-weight: 300;
+  font-size: var(--scale0);
+
+  p,
+  li {
+    max-width: 65ch;
+  }
+
+  .teasing {
+    font-weight: 200;
+    font-size: var(--scale1);
+    line-height: 1.4;
+  }
+
+  strong {
+    font-family: Piazzolla, serif;
+    font-weight: 700;
+  }
 }
