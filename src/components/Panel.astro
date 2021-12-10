@@ -4,6 +4,7 @@ const { position = "left", title = null } = Astro.props
 ---
 <article id={ title } class={ position }>
   <div class="content">
+    <!-- Using a named slot in case I want to add other stuff to this -->
     <slot name="content"/>
   </div>
 </article>
@@ -17,7 +18,6 @@ article {
 }
 
 .content {
-  max-width: 60ch;
   padding: 1em;
 }
 
@@ -42,6 +42,14 @@ article {
 }
 
 #intro {
-  padding-top: calc(var(--vw12) * 0.3);
+  padding-top: 1rem;
+}
+
+// TODO: put it in the component?
+#apropos {
+  :global(.mugshot) > img {
+    float: right;
+    width: calc(var(--vw12) * 3);
+  }
 }
 </style>

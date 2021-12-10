@@ -9,15 +9,20 @@ const setClass = position;
 
 <style lang="scss">
   #title {
+    // Colors for outlined text below in h1
+    --color-shadow: var(--color-text);
+    --color-bg-outline: var(--color-fancy-bg);
+
     justify-self: start;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--color-text);
+    // border: 2px solid var(--color-text);
     border-radius: var(--box-radius);
-    z-index: 10;
+    background-color: var(--color-bg-outline);
+    z-index: -10;
     padding: 1rem;
 
-    &::after {
+    &::afte {
       content: "";
       position: absolute;
       z-index: -10;
@@ -25,26 +30,26 @@ const setClass = position;
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: var(--color-fancy-bg);
+      background-color: var(--color-bg-outline);
     }
 
     :global(.title-item) {
       // background-color: var(--color-fancy-bg);
       display: block;
-      text-align: center;
+      text-align: left;
       line-height: 1.2;
       width: 100%;
-      color: var(--color-accent);
+      color: var(--color-text);
 
       > h1 {
-        color: var(--color-fancy-bg); // rgb(0 0 0 / 0.05);
-        -webkit-text-stroke: 1px var(--color-text);
+        color: var(--color-bg-outline); // rgb(0 0 0 / 0.05);
+        letter-spacing: 0.05em;
         text-shadow:
-          2px 2px 0 #000,
-          -1px -1px 0 #000,
-          1px -1px 0 #000,
-          -1px 1px 0 #000,
-          1px 1px 0 #000;
+          1px 1px 0 var(--color-shadow),
+          -1px -1px 0 var(--color-shadow),
+          1px -1px 0 var(--color-shadow),
+          -1px 1px 0 var(--color-shadow),
+          1px 1px 0 var(--color-shadow);
       }
     }
   }

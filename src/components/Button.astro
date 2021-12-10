@@ -1,0 +1,56 @@
+---
+let { type = 'button', theme } = Astro.props;
+---
+<button class={theme} type={type}>
+  <slot />
+</button>
+
+<style lang="scss">
+button {
+  --button-radius: 10px;
+  --button-text-color: var(--color-text);
+  font-size: var(--scale-2);
+  font-weight: 400;
+  display: inline-flex;
+  position: relative;
+  margin: 0;
+  padding: 0 1rem;
+  border: 1px solid var(--color-text);
+  border-radius: var(--button-radius);
+  color: var(--button-text-color);
+  font-family: var(--font-body-1-font-family);
+  letter-spacing: var(--font-body-1-letter-spacing);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  &:disabled {
+      opacity: var(--disabled-opacity);
+      cursor: not-allowed;
+      pointer-events: none;
+  }
+
+  &:focus {
+      outline: none;
+  }
+
+  &:hover:not([disabled]) {
+      cursor: pointer;
+  }
+}
+
+.nav {
+  align-self: center;
+}
+
+.panel {
+  background-color: var(--color-fancy-bg);
+
+  &:hover:not([disabled]) {
+    background-color: var(--color-fancy-bg-darker);
+  }
+}
+</style>

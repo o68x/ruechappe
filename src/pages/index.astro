@@ -1,12 +1,13 @@
 ---
 import { Markdown } from 'astro/components';
 
+import Button from '../components/Button.astro';
+import Footer from '../components/DefaultFooter.astro';
 import Html from "../layouts/default.astro";
 import Header from '../components/DefaultHeader.astro';
-import PanelTitle from '../components/PanelTitle.astro';
 import Panel from '../components/Panel.astro';
 import PanelFull from '../components/PanelFull.astro';
-import Footer from '../components/DefaultFooter.astro';
+import PanelTitle from '../components/PanelTitle.astro';
 
 let title = 'Olivier Cardinaux, rue Chappe, Paris';
 let description = 'Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.';
@@ -19,7 +20,7 @@ let permalink = 'https://ruechappe.fr/';
     <Header />
   </header>
   <PanelTitle>
-    <div class="title-item"><h1>Olivier&nbsp;Cardinaux</h1></div>
+    <div class="title-item"><h1>olivier&nbsp;cardinaux</h1></div>
     <div class="title-item"><h4>Fabricant de sites internet personnalisés à Montmartre</h4></div>
   </PanelTitle>
 
@@ -39,6 +40,10 @@ let permalink = 'https://ruechappe.fr/';
       Je conçois en gardant à l’esprit la facilité d’utilisation, en m’efforçant de créer des projets accessibles à tous.
 
       Chaque frappe de touche (Fig 3) est soigneusement étudiée car j’essaie d’écrire un code simple et résistant. L’amélioration progressive est la philosophie avec laquelle je cherche à travailler.
+
+      <Button theme="panel">Oh oui je veux</Button>
+      <Button>Button naked</Button>
+
       </Markdown>
     </div>
   </Panel>
@@ -83,7 +88,7 @@ body {
   background-color: var(--color-fancy-bg);
 
   :global(#title) {
-    grid-column: 2 / 7;
+    grid-column: 2 / 6;
     grid-row: 2;
     transform: translateY(calc((var(--vw12) / 2) + 1rem));
   }

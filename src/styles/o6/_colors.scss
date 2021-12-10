@@ -2,6 +2,7 @@
   --color-text: var(--color-text-black);
   --color-text-bg: var(--color-bg-white);
   --color-fancy-bg: rgb(254 252 113);
+  --color-fancy-bg-darker: rgba(254 252 113 / 20%);
 }
 
 @mixin dark-colors {

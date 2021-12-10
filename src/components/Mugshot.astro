@@ -1,0 +1,18 @@
+---
+const { img } = Astro.props
+const file = "/assets/images/" + img;
+---
+<div class="mugshot">
+  <img src={file} alt="Photo de moi">
+</div>
+
+<style lang='scss'>
+.mugshot {
+  width: 100%;
+  img {
+    // HACK: changed mix to filter because of gsap pb
+    //mix-blend-mode: luminosity;
+    filter: grayscale(100%);
+  }
+}
+</style>
