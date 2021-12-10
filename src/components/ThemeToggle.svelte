@@ -1,14 +1,19 @@
 <script lang="ts">
+
 import { onMount } from "svelte";
 
-let theme;
+let userTheme;
+let uiTheme;
 let root;
-let target;
+let sysThemeDark;
 
 onMount(() => {
-    root = document.documentElement;
-    theme = localStorage.getItem('theme');
-    setTheme(theme);
+  root = document.documentElement;
+  userTheme = localStorage.getItem('theme');
+  uiTheme = root.getAttribute('data-theme');
+  sysThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  console.log("SYS: " + sysThemeDark);
+    // setTheme();
   });
 
   const [darkIcon, lightIcon] = [
@@ -26,28 +31,28 @@ onMount(() => {
   </svg>`,
 ];
 
-function setTheme(target) {
-  if (target == 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    root.setAttribute("data-theme", "dark");
-    localStorage.setItem('theme', 'dark');
-  } else {
-    root.removeAttribute("data-theme");
-    localStorage.removeItem('theme');
-  }
-}
-
 function handleChange(e) {
-  theme = (theme == 'dark') ? 'light' : 'dark';
-  console.log('handle ' + theme);
-  setTheme(theme);
-  console.log('set' + theme);
+  console.log('THIS WILL CHANGE UI: ' + uiTheme + " USER " + userTheme);
+  let settheme;
+  if (!userTheme) {
+    settheme = (sysThemeDark) ? 'light' : 'dark';
+    root.setAttribute("data-theme", settheme);
+    localStorage.setItem("theme", settheme);
+  } else {
+    settheme = (uiTheme == "dark") ? 'light' : 'dark';
+    root.setAttribute("data-theme", settheme);
+    localStorage.setItem("theme", settheme);
+  }
+  uiTheme = root.getAttribute('data-theme');
+  userTheme = localStorage.getItem('theme');
+  console.log('LOOK: ' + settheme);
 };
 
 </script>
 
 <!-- The svg symbols are hidden in the default.astro layout file -->
 <div on:click={handleChange}>
-  {#if theme != 'dark' }
+  {#if uiTheme != 'dark' }
     {@html lightIcon}
   {:else}
     {@html darkIcon}

@@ -11,7 +11,7 @@ const { title, description, permalink, current } = Astro.props
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="/assets/style/modern_reset.css">
-    <link rel="stylesheet" href="/assets/fonts/moriston.css">
+    <!-- <link rel="stylesheet" href="/assets/fonts/moriston.css"> -->
     <link rel="stylesheet" href={Astro.resolve('../styles/main.scss')}>
 
     <!-- Preload fonts -->
@@ -22,14 +22,23 @@ const { title, description, permalink, current } = Astro.props
     <!-- This is intentionally inlined to avoid FOUC -->
     <script>
       const root = document.documentElement;
-      let theme = localStorage.getItem('theme');
+      let userTheme = localStorage.getItem('theme');
+      let sysThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-      if (theme == 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        root.setAttribute("data-theme", "dark");
-      } else {
-        root.removeAttribute("data-theme");
-      }
-      console.log("THEME: " + theme);
+      // if (!userTheme) {
+      //   if (sysThemeDark) {
+      //     root.setAttribute("data-theme", "dark");
+      //   } else {
+      //     root.setAttribute("data-theme", "light");
+      //   }
+      // } else {
+      //   if (userTheme == 'dark') {
+      //     root.setAttribute("data-theme", "dark");
+      //   } else if(userTheme == 'light') {
+      //     root.setAttribute("data-theme", "light");
+      //   }
+      // };
+      console.log("HEADER SETS THEME: " + userTheme);
     </script>
 
     <script type="module" src={Astro.resolve('../js/index.js')} defer></script>
