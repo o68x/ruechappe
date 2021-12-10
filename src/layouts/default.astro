@@ -19,29 +19,8 @@ const { title, description, permalink, current } = Astro.props
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap"> -->
 
-    <!-- This is intentionally inlined to avoid FOUC -->
-    <script>
-      const root = document.documentElement;
-      let userTheme = localStorage.getItem('theme');
-      let sysThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-      // if (!userTheme) {
-      //   if (sysThemeDark) {
-      //     root.setAttribute("data-theme", "dark");
-      //   } else {
-      //     root.setAttribute("data-theme", "light");
-      //   }
-      // } else {
-      //   if (userTheme == 'dark') {
-      //     root.setAttribute("data-theme", "dark");
-      //   } else if(userTheme == 'light') {
-      //     root.setAttribute("data-theme", "light");
-      //   }
-      // };
-      console.log("HEADER SETS THEME: " + userTheme);
-    </script>
-
     <script type="module" src={Astro.resolve('../js/index.js')} defer></script>
+    <script src="/assets/js/ThemeToggle.js"></script>
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
