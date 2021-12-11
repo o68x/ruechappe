@@ -1,8 +1,17 @@
 /* stylelint-disable custom-property-empty-line-before */
+
+@import "open-props/style";
+@import "o6/colors.css";
+
+/* @import "open-props/normalize"; */
+
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400;700;900&display=swap");
+
 :root {
   --font-sans: bitter, system-ui, sans-serif;
   --font-cursive: piazzolla, cursive;
   --vw12: 8.333vw; /* 8.33vw is 1/12 de 100vw, bcz of 12 cols grid */
+  --text-1: var(--gray-9);
 }
 
 body {
@@ -20,11 +29,8 @@ body {
   --link: var(--indigo-7);
   --link-visited: var(--grape-7);
 
-  --text-1: var(--gray-9);
-  --text-2: var(--gray-7);
-
   --surface-1: var(--yellow-2);
-  --surface-2: var(--gray-2);
+  --surface-2: var(--o6gray-2);
   --surface-3: var(--gray-3);
   --surface-4: var(--gray-4);
 
@@ -33,6 +39,11 @@ body {
 
   --shadow-color: 220 3% 15%;
   --shadow-strength: 1%;
+
+  & .panel {
+    --text-1: var(--gray-9);
+    --text-2: var(--gray-7);
+  }
 }
 
 [data-theme="dark"] {
@@ -42,9 +53,6 @@ body {
 
   --link: var(--indigo-3);
   --link-visited: var(--grape-3);
-
-  --text-1: var(--gray-1);
-  --text-2: var(--gray-2);
 
   --surface-1: var(--yellow-4);
   --surface-2: var(--gray-8);
@@ -56,6 +64,11 @@ body {
 
   --shadow-strength: 10%;
   --shadow-color: 220 40% 2%;
+
+  & .panel {
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-2);
+  }
 }
 
 .teasing {

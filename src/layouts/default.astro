@@ -1,16 +1,6 @@
 ---
 const { title, description, permalink, current } = Astro.props
 ---
-
-<style>
-@import "open-props/style";
-
-/* @import "open-props/normalize"; */
-
-@import "../styles/style.css";
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400;700;900&display=swap");
-</style>
-
 <!doctype html>
 <html lang="fr" class="no-js">
   <head>
@@ -25,7 +15,7 @@ const { title, description, permalink, current } = Astro.props
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap"> -->
 
     <link rel="stylesheet" href="/assets/style/modern_reset.css">
-
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
     <script type="module" src={Astro.resolve('../js/index.js')} defer></script>
     <script src="/assets/js/ThemeToggle.js"></script>
 
