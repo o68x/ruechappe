@@ -16,15 +16,14 @@ let permalink = "https://ruechappe.fr/";
 ---
 
 <Html title={title} description={description} permalink={permalink}>
-  <body id="fuck" class="loading" data-shit>
+  <body class="loading">
     <header class="full">
       <Header />
     </header>
+
     <PanelTitle>
-      <div class="title-item"><h1>olivier&nbsp;cardinaux</h1></div>
-      <div class="title-item">
-        <h4>Fabricant de sites internet personnalisés à Montmartre</h4>
-      </div>
+      <h1>olivier&nbsp;cardinaux</h1>
+      <h3>Fabricant de sites internet personnalisés</h3>
     </PanelTitle>
 
     <Panel position="right" title="intro">
@@ -91,7 +90,7 @@ let permalink = "https://ruechappe.fr/";
 
 <style>
   body {
-    background-color: var(--yellow-2);
+    background-color: var(--surface-1);
 
     :global(#title) {
       grid-column: 2 / 6;
@@ -101,15 +100,6 @@ let permalink = "https://ruechappe.fr/";
 
     :global(#intro) {
       grid-row: 3;
-    }
-  }
-
-</style>
-
-<style global>
-  [data-theme="dark"] {
-    & body {
-      background-color: var(--yellow-8);
     }
   }
 

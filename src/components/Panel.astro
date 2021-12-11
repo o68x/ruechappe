@@ -10,13 +10,12 @@ const { position = "left", title = null } = Astro.props
 </article>
 
 <style>
-@import "panel.css";
-
 article {
   border: 1px solid var(--text-1);
   border-radius: var(--radius-2);
-  /* background-color: var(--text-1-bg); */
+  background-color: var(--surface-2);
   color: var(--text-1);
+  font-weight: var(--font-weight-3);
 }
 
 .content {
@@ -24,32 +23,28 @@ article {
 }
 
 .center.columns {
-  .content {
+  & > .content {
     @media all and (min-width: 900px) {
       max-width: max-content;
       columns: 2 auto;
-      column-gap: 2rem;
+      column-gap: var(--size-fluid-3);
     }
 
     @media all and (min-width: 1500px) {
       max-width: max-content;
       columns: 3 auto;
-      column-gap: 2rem;
+      column-gap: var(--size-fluid-4);
     }
   }
 }
 
-#hero {
-  color: orangered;
-}
-
 #intro {
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 
-// TODO: put it in the component?
+/* TODO: put it in the component? */
 #apropos {
-  :global(.mugshot) > img {
+  & :global(.mugshot) > img {
     float: right;
     width: calc(var(--vw12) * 3);
   }

@@ -1,17 +1,12 @@
 ---
+import Logo from "./HeaderLogo.astro";
 import Button from "./Button.astro";
-import HomeIcon from "./svg/home.svg.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-import WorldIcon from "./svg/world.svg.astro";
 ---
 
 <div class="header-inner">
   <div class="header-left logo">
-    <a class="nav-link" href="/">
-      <HomeIcon />
-      ruechappe.fr
-      <WorldIcon />
-    </a>
+    <Logo />
   </div>
 
   <div class="header-right">
@@ -30,30 +25,26 @@ import WorldIcon from "./svg/world.svg.astro";
   </div>
 </div>
 
-<style lang="scss">
+<style>
   .header-inner {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-
-    :global(svg) {
-      transform: translateY(5px);
-    }
+    padding: var(--size-fluid-1);
   }
 
   .header-left,
   .header-right,
   #sitenav > ul {
     display: flex;
-    gap: 1rem;
+    gap: var(--size-fluid-1);
     line-height: 1.1;
     align-self: baseline;
   }
 
   .logo {
-    font-size: 32px;
+    font-size: 27px;
 
-    > a {
+    & > a {
       color: inherit;
     }
   }

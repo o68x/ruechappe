@@ -7,50 +7,26 @@ const setClass = position;
   <slot />
 </div>
 
-<style lang="scss">
+<style>
   #title {
-    // Colors for outlined text below in h1
-    --color-shadow: var(--text-1);
-    --color-bg-outline: var(--color-fancy-bg);
-
     justify-self: start;
     display: flex;
     flex-direction: column;
-    // border: 2px solid var(--text-1);
     border-radius: var(--radius-2);
-    background-color: var(--color-bg-outline);
-    z-index: -10;
+    background-color: var(--surface-1);
     padding: 1rem;
 
-    &::afte {
-      content: "";
-      position: absolute;
-      z-index: -10;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: var(--color-bg-outline);
-    }
-
-    :global(.title-item) {
-      // background-color: var(--color-fancy-bg);
-      display: block;
-      text-align: left;
-      line-height: 1.2;
-      width: 100%;
-      color: var(--text-1);
-
-      > h1 {
-        color: var(--color-bg-outline); // rgb(0 0 0 / 0.05);
-        letter-spacing: 0.05em;
-        text-shadow:
-          1px 1px 0 var(--color-shadow),
-          -1px -1px 0 var(--color-shadow),
-          1px -1px 0 var(--color-shadow),
-          -1px 1px 0 var(--color-shadow),
-          1px 1px 0 var(--color-shadow);
-      }
+    & > :global(h1) {
+      color: var(--surface-1);
+      font-size: var(--font-size-fluid-3);
+      letter-spacing: var(--font-letterspacing-3);
+      text-shadow:
+        1px 1px 0 var(--text-1),
+        -1px -1px 0 var(--text-1),
+        1px -1px 0 var(--text-1),
+        -1px 1px 0 var(--text-1),
+        1px 1px 0 var(--text-1);
     }
   }
+
 </style>
