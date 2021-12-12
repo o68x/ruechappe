@@ -32,40 +32,9 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "svelte-preprocess": "^4.9.8"
   },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard-scss",
-      "stylelint-config-html"
-    ],
-    "rules": {
-      "scss/no-global-function-names": null,
-      "no-descending-specificity": null,
-      "selector-pseudo-class-no-unknown": [
-        true,
-        {
-          "ignorePseudoClasses": [
-            "global"
-          ]
-        }
-      ]
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/*.astro"
-        ],
-        "customSyntax": "postcss-html"
-      }
-    ],
-    "ignoreFiles": [
-      "dist/**/*",
-      "node_modules/**/*"
-    ]
-  },
   "dependencies": {
-    "js-cookie": "^3.0.1",
     "open-props": "^1.0.12",
-    "rfs": "^9.0.6",
+    "rough-notation": "^0.5.1",
     "splitting": "^1.0.6"
   }
 }
