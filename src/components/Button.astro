@@ -7,7 +7,7 @@ let { type = 'button', theme } = Astro.props;
 
 <style>
 button {
-  --button-radius: var(--radius-2);
+  --button-radius: var(--radius-round);
   --button-text-color: var(--text-1);
 
   font-size: var(--scale-2);
@@ -51,7 +51,7 @@ button {
   background-color: var(--surface-1);
 
   &:hover:not([disabled]) {
-    background-color: var(--surface-2);
+    background-color: var(--surface-1-hover);
   }
 }
 </style>

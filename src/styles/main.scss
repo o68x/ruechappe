@@ -35,4 +35,8 @@ body {
   > footer {
     align-self: end;
   }
+
+  > :global(#title) {
+    grid-column: 2 / 9;
+  }
 }
