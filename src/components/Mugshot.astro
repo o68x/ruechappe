@@ -9,9 +9,10 @@ const file = "/assets/images/" + img;
 <style lang='scss'>
 .mugshot {
   width: 100%;
-  img {
-    // HACK: changed mix to filter because of gsap pb
-    //mix-blend-mode: luminosity;
+
+  & img {
+    /* HACK: changed mix to filter because of gsap pb
+    mix-blend-mode: luminosity; */
     filter: grayscale(100%);
   }
 }

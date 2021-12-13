@@ -7,50 +7,33 @@ const setClass = position;
   <slot />
 </div>
 
-<style lang="scss">
+<style>
   #title {
-    // Colors for outlined text below in h1
-    --color-shadow: var(--color-text);
-    --color-bg-outline: var(--color-fancy-bg);
-
     justify-self: start;
     display: flex;
     flex-direction: column;
-    // border: 2px solid var(--color-text);
-    border-radius: var(--box-radius);
-    background-color: var(--color-bg-outline);
-    z-index: -10;
+    border-radius: var(--radius-2);
+    background-color: var(--surface-1);
     padding: 1rem;
 
-    &::afte {
-      content: "";
-      position: absolute;
-      z-index: -10;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: var(--color-bg-outline);
+    & > :global(h1) {
+      color: var(--surface-1);
+      font-size: var(--font-size-fluid-3);
+      letter-spacing: var(--font-letterspacing-1);
+      text-shadow:
+        0.02em 0.02em 0 var(--text-1),
+        -0.02em -0.02em 0 var(--text-1),
+        -0.02em 0.02em 0 var(--text-1),
+        0.02em -0.02em 0 var(--text-1),
+        0 0.02em 0 var(--text-1),
+        0 -0.02em 0 var(--text-1),
+        -0.02em 0 0 var(--text-1),
+        0.02em 0 0 var(--text-1);
     }
 
-    :global(.title-item) {
-      // background-color: var(--color-fancy-bg);
-      display: block;
-      text-align: left;
-      line-height: 1.2;
-      width: 100%;
-      color: var(--color-text);
-
-      > h1 {
-        color: var(--color-bg-outline); // rgb(0 0 0 / 0.05);
-        letter-spacing: 0.05em;
-        text-shadow:
-          1px 1px 0 var(--color-shadow),
-          -1px -1px 0 var(--color-shadow),
-          1px -1px 0 var(--color-shadow),
-          -1px 1px 0 var(--color-shadow),
-          1px 1px 0 var(--color-shadow);
-      }
+    & > :global(h3) {
+      max-width: 66.66%;
     }
   }
+
 </style>

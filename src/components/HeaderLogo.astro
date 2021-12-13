@@ -1,0 +1,98 @@
+---
+import HomeIcon from "./svg/home.svg.astro";
+import WorldIcon from "./svg/world.svg.astro";
+---
+
+<div class="brand">
+  <div class="icon stacked js-brand-switch">
+    <span class="visible">
+      <HomeIcon size="48px"/>
+    </span>
+    <span>
+      <WorldIcon size="48px"/>
+    </span>
+  </div>
+  <div class="brand-name text-logo">olivier cardinaux</div>
+    <div class="brand-sub stacked">
+      <div class="text-logo visible">www.ruechappe.fr</div>
+      <div class="text-logo">4 rue Chappe, Paris 18e</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.brand {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  flex-direction: row;
+  width: max-content;
+
+  & > [class^="brand-"] {
+    grid-column: 2;
+  }
+
+  & > .icon {
+    grid-row: 1 / span 2;
+    align-self: center;
+    width: 48px;
+    height: 48px;
+
+    & > span {
+      opacity: 0;
+    }
+  }
+}
+
+.brand-name {
+  font-size: 4.5vw;
+  height: 0.72em;
+  align-self: end;
+  padding: 0 0.1em;
+}
+
+.brand-sub {
+  border-top: 2px solid var(--brand);
+  background-color: var(--surface-1);
+  padding: 0 0.2em;
+  height: 3rem;
+
+  & :nth-child(1) {
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    color: blue;
+  }
+
+  & :nth-child(2) {
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    color: green;
+  }
+}
+
+span.visible {
+  opacity: 1 !important;
+}
+</style>
+
+<script>
+const toggleLogo = document.querySelector(".js-brand-switch");
+const toggleLogoItems = toggleLogo.querySelectorAll("span");
+const brandLogoItems = document.querySelector(".brand-sub").querySelectorAll("div");
+
+toggleLogo.addEventListener("click", e => {
+    brandLogoItems.forEach(i => {
+      i.classList.toggle("visible");
+    });
+    toggleLogoItems.forEach(i => {
+      i.classList.toggle("visible");
+    })
+  });
+</script>

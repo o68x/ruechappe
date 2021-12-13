@@ -1,5 +1,3 @@
-@use "o6"; // this works with _index.scss file, new
-
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -37,11 +35,8 @@ body {
   > footer {
     align-self: end;
   }
-}
 
-#symbols {
-  display: none;
-  position: absolute;
-  width: 0;
-  height: 0;
+  > :global(#title) {
+    grid-column: 2 / 9;
+  }
 }

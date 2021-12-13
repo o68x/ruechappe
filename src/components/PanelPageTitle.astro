@@ -6,39 +6,28 @@ const setClass = position
   <slot />
 </div>
 
-<style lang="scss">
+<style>
 #title {
   position: relative;
   justify-self: stretch;
   align-self: center;
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--color-text);
-  border-radius: var(--box-radius);
+  border: 2px solid var(--text-1);
+  border-radius: var(--radius-2);
   z-index: 10;
   padding: 1rem;
 
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--color-fancy-bg);
-  }
-
   :global(.title-item) {
-    // background-color: var(--color-fancy-bg);
+    /* background-color: var(--color-fancy-bg); */
     display: block;
     text-align: center;
-    line-height: 1.2;
+    line-height: var(font-lineheight-1);
     width: 100%;
-    color: var(--color-accent);
+    color: var(--text-1);
 
     &:first-of-type {
-      color: var(--color-text);
+      color: var(--text-1);
     }
   }
 }

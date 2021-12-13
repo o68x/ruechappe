@@ -1,0 +1,18 @@
+/* stylelint-disable custom-property-empty-line-before */
+
+@import "open-props/style";
+@import "o6/colors.css";
+@import "o6/theme-light.css";
+@import "o6/theme-dark.css";
+@import "o6/typography.css";
+
+/* @import "open-props/normalize"; */
+
+.stacked {
+  display: grid;
+  grid: [stack] 1fr / [stack] 1fr;
+
+  & > * {
+    grid-area: stack;
+  }
+}

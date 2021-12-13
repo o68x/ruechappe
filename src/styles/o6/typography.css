@@ -1,0 +1,53 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400..900&display=swap"); */
+
+:root {
+  --font-sans: bitter, system-ui, sans-serif;
+  --font-cursive: piazzolla, cursive;
+  --vw12: 8.333vw; /* 8.33vw is 1/12 de 100vw, bcz of 12 cols grid */
+  --text-1: var(--gray-9);
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: var(--font-lineheight-2);
+  font-size: 18px;
+  font-weight: var(--font-weight-4);
+}
+
+h1 {
+  font-size: var(--font-size-fluid-3);
+  font-weight: var(--font-weight-9);
+}
+
+h2 {
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-3);
+}
+
+h3 {
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-3);
+}
+
+h4 {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-5);
+}
+
+.teasing {
+  line-height: var(--font-lineheight-2);
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-2);
+}
+
+.text-logo {
+  font-family: Piazzolla, serif;
+  font-weight: var(--font-weight-9);
+  letter-spacing: var(--font-letterspacing-2);
+  color: var(--brand);
+}
+
+.article {
+  font-weight: var(--font-weight-3);
+  font-size: var(--font-size-2);
+}

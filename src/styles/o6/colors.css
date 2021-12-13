@@ -1,0 +1,22 @@
+:where(html) {
+  --o6gray-0: #f8f9fa;
+  --o6gray-1: #f1f3f5;
+  --o6gray-2: #e9ecef;
+  --o6gray-3: #dee2e6;
+  --o6gray-4: #ced4da;
+  --o6gray-5: #adb5bd;
+  --o6gray-6: #868e96;
+  --o6gray-7: #495057;
+  --o6gray-8: #343a40;
+  --o6gray-9: #212529;
+  --o6red-0: #fff5f5;
+  --o6red-1: #ffe3e3;
+  --o6red-2: #ffc9c9;
+  --o6red-3: #ffa8a8;
+  --o6red-4: #ff8787;
+  --o6red-5: #ff6b6b;
+  --o6red-6: #fa5252;
+  --o6red-7: #f03e3e;
+  --o6red-8: #e03131;
+  --o6red-9: #c92a2a;
+}

@@ -1,21 +1,22 @@
 ---
 let { type = 'button', theme } = Astro.props;
 ---
-<button class={theme} type={type}>
+<button class={ theme } type={ type }>
   <slot />
 </button>
 
-<style lang="scss">
+<style>
 button {
-  --button-radius: 10px;
-  --button-text-color: var(--color-text);
+  --button-radius: var(--radius-round);
+  --button-text-color: var(--text-1);
+
   font-size: var(--scale-2);
   font-weight: 400;
   display: inline-flex;
   position: relative;
   margin: 0;
-  padding: 0 1rem;
-  border: 1px solid var(--color-text);
+  padding: 0 var(--size-fluid-2);
+  border: 1px solid var(--text-1);
   border-radius: var(--button-radius);
   color: var(--button-text-color);
   font-family: var(--font-body-1-font-family);
@@ -28,17 +29,17 @@ button {
   user-select: none;
 
   &:disabled {
-      opacity: var(--disabled-opacity);
-      cursor: not-allowed;
-      pointer-events: none;
+    opacity: var(--disabled-opacity);
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
   &:focus {
-      outline: none;
+    outline: none;
   }
 
   &:hover:not([disabled]) {
-      cursor: pointer;
+    cursor: pointer;
   }
 }
 
@@ -47,10 +48,10 @@ button {
 }
 
 .panel {
-  background-color: var(--color-fancy-bg);
+  background-color: var(--surface-1);
 
   &:hover:not([disabled]) {
-    background-color: var(--color-fancy-bg-darker);
+    background-color: var(--surface-1-hover);
   }
 }
 </style>
