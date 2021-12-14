@@ -1,1 +1,1 @@
-// Keep VS Code yypescript server happy?
+// Keep VS Code typescript server happy?
