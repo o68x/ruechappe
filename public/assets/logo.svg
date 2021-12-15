@@ -1,5 +1,5 @@
 <svg width="193" height="256" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <style>
+    <style lang="scss">
         #flame { fill: #FF5D01; }
         #a { fill: #000014; }
         @media (prefers-color-scheme: dark) {

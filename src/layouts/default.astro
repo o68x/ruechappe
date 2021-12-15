@@ -14,9 +14,10 @@ const { title, description, permalink, current } = Astro.props
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/style/modern_reset.css">
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+    <link rel="stylesheet" href="https://unpkg.com/open-props"/>
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
     <script type="module" src={Astro.resolve('../js/index.js')} defer></script>
-    <script src="/assets/js/ThemeToggle.js"></script>
+    <script src="/assets/js/ThemeToggle.js" defer></script>
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
@@ -37,12 +38,12 @@ const { title, description, permalink, current } = Astro.props
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="https://astro.build/social.jpg?v=1" />
   </head>
-
-  <!-- Here comes a body -->
-  <slot />
+    <body class="loading" id="${current}">
+      <slot />
+    </body>
 </html>
 
-<style>
+<style lang="scss">
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -75,7 +76,7 @@ body {
     grid-column: -8 / -2;
   }
 
-  > footer {
+  > :global(footer) {
     align-self: end;
   }
 }

@@ -1,0 +1,13 @@
+@use "o6/colors";
+@use "o6/theme-light";
+@use "o6/theme-dark";
+@use "o6/typography";
+
+.stacked {
+  display: grid;
+  grid: [stack] 1fr / [stack] 1fr;
+
+  & > * {
+    grid-area: stack;
+  }
+}

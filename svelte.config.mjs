@@ -4,10 +4,10 @@ export default {
     preprocess: sveltePreprocess(),
     vite: {
         build: {
-            'sourcemap': true,
+            'sourcemap': false,
         },
     },
     buildOptions: {
-        'sourcemap': true,
+        'sourcemap': false,
     }
 };

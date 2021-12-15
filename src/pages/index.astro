@@ -13,17 +13,17 @@ let title = "Olivier Cardinaux, rue Chappe, Paris";
 let description =
   "Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.";
 let permalink = "https://ruechappe.fr/";
+let current = "index";
 ---
 
-<Html title={title} description={description} permalink={permalink}>
-  <body class="loading">
+<Html title={title} description={description} permalink={permalink} current={current}>
     <header class="full">
       <Header />
     </header>
 
     <PanelTitle>
-      <h1>Conception et fabrication de sites internet personnalisés à Montmartre</h1>
-      <h3>olivier&nbsp;cardinaux</h3>
+      <h1>Conception et fabrication de sites internet personnalisés</h1>
+      <h3>MADE IN MONTMARTRE (PARIS, FRANCE)</h3>
     </PanelTitle>
 
     <Panel position="right panel" title="intro">
@@ -85,10 +85,9 @@ let permalink = "https://ruechappe.fr/";
     <footer class="full">
       <Footer />
     </footer>
-  </body>
 </Html>
 
-<style>
+<style lang="scss">
   body {
     background-color: var(--surface-1);
 

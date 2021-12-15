@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro/components';
+import { Debug } from 'astro/debug';
 
 import Footer from '../components/DefaultFooter.astro';
 import Html from "../layouts/default.astro";
@@ -13,10 +14,10 @@ import PanelTitle from '../components/PanelTitle.astro';
 let title = 'Olivier Cardinaux, rue Chappe, Paris';
 let description = 'Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.';
 let permalink = 'https://ruechappe.fr/apropos';
+let current = "apropos";
 ---
-<Html title={ title } description = { description } permalink = { permalink } >
+<Html title={ title } description = { description } permalink = { permalink } current={current}>
 
-<body>
   <header class="full">
     <Header />
   </header>
@@ -46,11 +47,10 @@ let permalink = 'https://ruechappe.fr/apropos';
   <footer class="full">
     <Footer />
   </footer>
-</body>
 
 </Html>
 
-<style>
+<style lang="scss">
 body {
   background-color: var(--surface-1);
 }

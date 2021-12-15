@@ -24,6 +24,7 @@ const getColorPreference = () => {
 }
 
 const setPreference = () => {
+  console.log("setPreference");
   localStorage.setItem('theme-preference', theme.value)
   reflectPreference()
 }
@@ -45,6 +46,7 @@ window.onload = () => {
   reflectPreference()
 
   document.querySelector('#theme-toggle').addEventListener('click', e => {
+    console.log(e);
     theme.value = theme.value === 'light'
       ? 'dark'
       : 'light'

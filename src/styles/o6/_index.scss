@@ -1,9 +1,0 @@
-// See https://github.com/twbs/rfs
-
-@use "../../../node_modules/rfs/scss" as * with (
-  $rfs-base-value: 0.875rem,
-  $rfs-factor: 10
-);
-@use "config";
-@use "colors";
-@use "typo";

@@ -40,3 +40,8 @@ body {
     grid-column: 2 / 9;
   }
 }
+
+.loading * {
+  transition: none !important;
+  animation: none !important;
+}
