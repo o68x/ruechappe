@@ -35,30 +35,31 @@ import SleepIcon from "./svg/sleep.svg.astro";
 
 </style>
 
-<style global>
-  [data-theme="light"] {
-    & #rise {
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-
-    & #sleep {
-      opacity: 1;
-      transition: all 0.3s ease;
-    }
+<style lang="scss" global>
+[data-theme="light"] {
+  #sleep {
+    opacity: 1;
+    transition: all 0.3s ease;
   }
 
-  [data-theme="dark"] {
-    & #rise {
-      opacity: 1;
-      transition: all 0.3s ease;
-    }
-
-    & #sleep {
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
+  #rise {
+    opacity: 0;
+    transition: all 0.3s ease;
+    fill: red;
   }
+}
+
+[data-theme="dark"] {
+  #sleep {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  #rise {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+}
 
 </style>
 
