@@ -1,0 +1,128 @@
+---
+import { Markdown } from 'astro/components';
+
+import Footer from '../components/DefaultFooter.astro';
+import Html from "../layouts/default.astro";
+import Header from '../components/DefaultHeader.astro';
+import Mugshot from '../components/Mugshot.astro';
+import Panel from '../components/Panel.astro';
+import PanelFull from '../components/PanelFull.astro';
+import PanelPageTitle from '../components/PanelPageTitle.astro';
+import PanelTitle from '../components/PanelTitle.astro';
+
+let title = 'Ma philosophie';
+let description = 'Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.';
+let permalink = 'https://ruechappe.fr/philosophie';
+let current = "philo";
+---
+<Html title={ title } description = { description } permalink = { permalink } current={current}>
+
+  <header class="full">
+    <Header />
+  </header>
+  <PanelPageTitle position="center">
+    <div class="title-item"><h1>philosophie</h1></div>
+  </PanelPageTitle>
+    <Panel position="stretch panel" title="moi">
+    <div slot="content">
+      <Markdown>
+      # je :
+
+      Fabriquer veut dire différentes choses, dans mon esprit. Voici quelques extraits du contenu de ma tête à ce sujet.
+
+      ## créér :
+
+      Des sites créés à la main. Je ne fais pas les choses à moitié. C'est du cousu main.
+
+      ## concevoir
+
+      Pas de site bateau, galère. Je pars du contenu, de ce que vous voulez partager, et comment. Sans ça, c'est pas la peine, merde. Faites-vous un WIX et on n'en parle plus.
+
+      ## coder
+
+      Oui, c'est le cœur du métier.
+
+      </Markdown>
+    </div>
+  </Panel>
+
+  <Panel position="stretch panel" title="fabrique">
+    <div slot="content">
+      <Markdown>
+      # fabriquer :
+
+      Fabriquer veut dire différentes choses, dans mon esprit. Voici quelques extraits du contenu de ma tête à ce sujet.
+
+      ## créér :
+
+      Des sites créés à la main. Je ne fais pas les choses à moitié. C'est du cousu main.
+
+      ## concevoir
+
+      Pas de site bateau, galère. Je pars du contenu, de ce que vous voulez partager, et comment. Sans ça, c'est pas la peine, merde. Faites-vous un WIX et on n'en parle plus.
+
+      ## coder
+
+      Oui, c'est le cœur du métier.
+
+      </Markdown>
+    </div>
+  </Panel>
+
+  <Panel position="stretch panel" title="internet">
+    <div slot="content">
+      <Markdown>
+      # internet :
+
+      Fabriquer veut dire différentes choses, dans mon esprit. Voici quelques extraits du contenu de ma tête à ce sujet.
+
+      ## créér :
+
+      Des sites créés à la main. Je ne fais pas les choses à moitié. C'est du cousu main.
+
+      ## concevoir
+
+      Pas de site bateau, galère. Je pars du contenu, de ce que vous voulez partager, et comment. Sans ça, c'est pas la peine, merde. Faites-vous un WIX et on n'en parle plus.
+
+      ## coder
+
+      Oui, c'est le cœur du métier.
+
+      </Markdown>
+    </div>
+  </Panel>
+
+  <Panel position="stretch panel" title="vous">
+    <div slot="content">
+      <Markdown>
+      # vous :
+
+      Fabriquer veut dire différentes choses, dans mon esprit. Voici quelques extraits du contenu de ma tête à ce sujet.
+
+      ## créér :
+
+      Des sites créés à la main. Je ne fais pas les choses à moitié. C'est du cousu main.
+
+      ## concevoir
+
+      Pas de site bateau, galère. Je pars du contenu, de ce que vous voulez partager, et comment. Sans ça, c'est pas la peine, merde. Faites-vous un WIX et on n'en parle plus.
+
+      ## coder
+
+      Oui, c'est le cœur du métier.
+
+      </Markdown>
+    </div>
+  </Panel>
+
+  <footer class="full">
+    <Footer />
+  </footer>
+
+</Html>
+
+<style lang="scss">
+body {
+  background-color: var(--blue-1);
+}
+</style>
