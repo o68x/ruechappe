@@ -7,24 +7,9 @@ import SleepIcon from "./svg/sleep.svg.astro";
   .theme-toggle-container {
     transition: transform 0.25s cubic-bezier(0, 1.5, 0.8, 1.2);
 
-    @media (pointer: coarse) {
-      width: var(--size-8);
-      transform: translateY(-0.5rem);
-    }
-
-    @media (pointer: fine) {
-      &:hover,
-      &:focus {
-        transform: translateY(-0.25rem);
-      }
-    }
-
-    @media (--md) {
-      width: 4rem;
-    }
-
-    @media print {
-      display: none;
+    &:hover,
+    &:focus {
+      transform: translateY(-0.25rem);
     }
   }
 
