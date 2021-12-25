@@ -3,7 +3,7 @@ const { position = "left", title = null } = Astro.props;
 const setClass = position;
 ---
 
-<div id="title" class={setClass}>
+<div id="title" class={ position }>
   <slot />
 </div>
 
@@ -29,6 +29,12 @@ const setClass = position;
         0 -0.02em 0 var(--text-1),
         -0.02em 0 0 var(--text-1),
         0.02em 0 0 var(--text-1);
+
+      & > strong {
+        color: var(--yellow-8);
+
+        // text-shadow: n;
+      }
     }
 
     & > :global(h3) {
