@@ -1,10 +1,11 @@
 ---
 import { Markdown } from "astro/components";
 
-import Button from "../components/Button.astro";
-import Footer from "../components/DefaultFooter.astro";
 import Html from "../layouts/default.astro";
 import Header from "../components/DefaultHeader.astro";
+import Footer from "../components/DefaultFooter.astro";
+
+import Button from "../components/Button.astro";
 import Panel from "../components/Panel.astro";
 import PanelFull from "../components/PanelFull.astro";
 import PanelTitle from "../components/PanelTitle.astro";
@@ -16,89 +17,52 @@ let permalink = "https://ruechappe.fr/";
 let current = "index";
 ---
 
-<Html title={title} description={description} permalink={permalink} current={current}>
-    <header class="full">
-      <Header />
-    </header>
+<Html {title} {description} {permalink} {current}>
+  <header class="full">
+    <nav id="sitenav">
+      <ul role="list">
+        <li>
+          <a href="/">index</a>
+        </li>
+        <li>
+          <a href="/inspirations">inspiration</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <Markdown>
+      # Contents
 
-    <PanelTitle position="center">
-      <h1>Je fabrique et prends <strong>soin</strong> de vos sites internet</h1>
-      <h3>Personnalisées et faciles à utiliser</h3>
-    </PanelTitle>
+      Ici je parle de mon offre, ce que je fais, propose, etc. Keçadir ?
 
-    <Panel position="right panel" title="intro">
-      <div slot="content">
-        <p class="teasing">
-          Bonjour, moi c'est Olivier.
+      ## offre
 
-          Je conçois et développe des sites internet.
+      Je crée des sites internet pour le plaisir, la beauté du geste. Mais ça doit être utile, aussi. Ce n'est pas que de l'art pour l'art. Quoi que c'est ce qui me plaît, pour être parfaitement honnête.
 
-          De votre interface de gestion du site aux pages pour les visiteurs, je construis votre site autour de vos contenus (produits, œuvres, activités).
-        </p>
-      </div>
-    </Panel>
+      Mais il faut que je gagne de l'argent, j'en ai besoin. Je ne peux pas faire sans, en réalité. Pas besoin de beaucoup, mais un petit peu, ça serait pas mal, en réalité.
 
-    <Panel position="left panel">
-      <div slot="content">
-        <Markdown>
-          ### *Outils*
+      - sites internet
+      - autres choses ?
 
-          Vous aider et vous donner la possibilité de prendre soin de votre site.
+      ## moi
 
-          Je conçois en gardant à l'esprit la facilité d’utilisation, en m’efforçant de créer des projets accessibles à tous.
+      - Qui suis-je ?
+      - Pourquoi devrait-on me faire confiance ?
+    </Markdown>
+  </div>
 
-          <Button theme="panel">Oh ouiii, je le veux ! &#10095; &rarr; &#x21e2; &#x27f6;</Button>
-          <Button>Button naked</Button>
-        </Markdown>
-      </div>
-    </Panel>
-
-    <PanelFull title="points">
-      <div slot="content">
-        <Markdown>
-          Il s'agit de s'adapter aux personnes, de leur rendre la vie plus facile, du moins ne pas la compliquer. J’aime collaborer, donner des conseils et aider à repousser les limites pour construire des projets qui attirent l’attention, sans sacrifier la simplicité d’utilisation.
-        </Markdown>
-      </div>
-      <div slot="content">
-        <Markdown>
-          Chaque frappe de touche (Fig 3) est soigneusement étudiée car j’essaie d’écrire un code simple et résistant. L’amélioration progressive est la philosophie avec laquelle je cherche à travailler.
-        </Markdown>
-      </div>
-      <div slot="content">
-        <Markdown>
-          Les projets prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.
-        </Markdown>
-      </div>
-    </PanelFull>
-
-    <Panel position="center columns panel">
-      <div slot="content">
-        <Markdown>
-          Les projets prennent tout leur sens lorsque leurs concepteurs comprennent comment ils seront construits, et pourquoi. Tout comme un architecte comprend comment une structure est créée, il devrait en être de même pour le web.
-
-          Tout aussi important, j'insiste pour donner de l'importance à l'autre versant : comprendre non seulement pourquoi, mais pour qui le projet est conçu. Il s'agit de s'adapter aux personnes, de leur rendre la vie plus facile, du moins ne pas la compliquer. J’aime collaborer, donner des conseils et aider à repousser les limites pour construire des projets qui attirent l’attention, sans sacrifier la simplicité d’utilisation.
-        </Markdown>
-      </div>
-    </Panel>
-
-    <footer class="full">
-      <Footer />
-    </footer>
+  <footer class="full">
+    <Footer />
+  </footer>
 </Html>
 
 <style lang="scss">
-  body {
-    background-color: var(--surface-1);
-
-    :global(#title) {
-      grid-column: 2 / 6;
-      grid-row: 2;
-      transform: translateY(calc((var(--vw12) / 2) + 1rem));
-    }
-
-    :global(#intro) {
-      grid-row: 3;
-    }
+  div {
+    grid-column: 2 / -2;
   }
 
+  p + p {
+    margin-top: 1rem;
+  }
 </style>

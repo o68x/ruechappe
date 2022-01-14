@@ -20,4 +20,12 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "css.validate": false,
+  "cssvar.files": [
+    // Or your custom Pollen bundle
+    "./node_modules/open-props/open-props.min.css",
+    "./src/styles/o6/*.scss"
+  ],
+  "cssvar.disableSort": true, 
+   // Add support for autocomplete in other file types
+  "cssvar.extensions": ["css", "scss", "html", "astro", "svelte"] 
 }
