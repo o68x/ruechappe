@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/o68x/ruechappe/compare/v0.0.6...v0.1.0) (2022-01-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* start all over, simplify
+
+### Features
+
+* some additional content ([4a424a3](https://github.com/o68x/ruechappe/commit/4a424a3d94c10ddab2988a257e5549f947e4be6f))
+* start all over, simplify ([287470a](https://github.com/o68x/ruechappe/commit/287470ae993266618f98bb5668a93604a1fc2386))
+* **wip:** add jit to open-props ([67c6c9e](https://github.com/o68x/ruechappe/commit/67c6c9e110dc2c8922ec6e4de815973d1c9299bd))
+
+
+### Bug Fixes
+
+* back to scss ([0d9391b](https://github.com/o68x/ruechappe/commit/0d9391baa9a6dcf34218f39f54137b9cac953bc7))
+* back to scss ([aad2115](https://github.com/o68x/ruechappe/commit/aad2115c1902a8c623ed32f681acce311e5713dc))
+* google's toggle ([880c85d](https://github.com/o68x/ruechappe/commit/880c85d419db952b8fd9f727eff63f51237fc857))
+* netlify build broken? ([abcc35b](https://github.com/o68x/ruechappe/commit/abcc35b2e6e7477defc69d9bfc06e0a06e712167))
+* remove theme-toggle :( ([af7c6b1](https://github.com/o68x/ruechappe/commit/af7c6b11c4fbca10eebd56c4e6361147c8143f1d))
+* remove toggle better ([c276ac5](https://github.com/o68x/ruechappe/commit/c276ac56b43a8c74d8ead08a537cbcf8f822f811))
+* scss postcss mess ([f3e9931](https://github.com/o68x/ruechappe/commit/f3e9931e543a5be7961dc618702f6ce06dee66c0))
+* themetoggle unknown words ([ab59d3c](https://github.com/o68x/ruechappe/commit/ab59d3ccc92c063ab74c66e87dba4f0dbba41c1b))
+* **wip:** open-props no postcss ([2de17c3](https://github.com/o68x/ruechappe/commit/2de17c3f81e787c3e08305fb7714c3adf7287e6a))
+* **wip:** toggle ([e861bbc](https://github.com/o68x/ruechappe/commit/e861bbcc10fd66f73cf86b28cc6fe8f6704965b0))
+
 ### [0.0.6](https://github.com/o68x/ruechappe/compare/v0.0.5...v0.0.6) (2021-12-14)
 
 ### [0.0.5](https://github.com/o68x/ruechappe/compare/v0.0.4...v0.0.5) (2021-12-13)
