@@ -27,5 +27,13 @@
   ],
   "cssvar.disableSort": true, 
    // Add support for autocomplete in other file types
-  "cssvar.extensions": ["css", "scss", "html", "astro", "svelte"] 
+  "cssvar.extensions": [
+    "css",
+    "scss",
+    "html",
+    "astro",
+    "svelte"
+  ],
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.tree.showBadges": true
 }
