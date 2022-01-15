@@ -1,51 +1,58 @@
 ---
 ---
-
-<div class="header-inner">
-  <div class="header-left logo">
-    LOGO
+  <div class="header-inner">
+  <div class="header-left logo text-logo">
+    Olivier@ruechappe.fr
   </div>
 
   <div class="header-right">
-    <nav id="sitenav">
-      <ul role="list">
-        <li>
-          <a href="/philosophie">Ma philosophie</a>
-        </li>
-        <li>
-          <a href="/apropos">À propos de mézigue</a>
-        </li>
-      </ul>
-    </nav>
+      <nav id="sitenav">
+        <ul role="list">
+          <li>
+            <a href="/">maison</a>
+          </li>
+          <li>
+            <a href="/">services</a>
+          </li>
+          <li>
+            <a href="/">à propos</a>
+          </li>
+          <li>
+            <a href="/inspirations">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 
 <style lang="scss">
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--size-fluid-1);
-  }
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--size-fluid-1);
+  z-index: 10;
+}
 
-  .header-left,
-  .header-right,
-  #sitenav > ul {
-    display: flex;
-    gap: var(--size-fluid-1);
-    line-height: 1.1;
-    align-items: center;
-    padding: 0;
-  }
+.header-left,
+.header-right,
+#sitenav > ul {
+  display: flex;
+  gap: var(--size-fluid-1);
+  line-height: 1.1;
+  align-items: center;
+  padding: 0;
+}
 
-  .logo {
-    font-size: 27px;
+.logo {
+  font-size: 27px;
 
-    & > a {
-      color: inherit;
-    }
+  & > a {
+    color: inherit;
   }
+}
 
-  #sitenav {
-    color: brown;
-  }
+#sitenav {
+  color: brown;
+}
+
 </style>
