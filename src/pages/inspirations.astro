@@ -5,150 +5,144 @@ import Html from "../layouts/default.astro";
 import Header from "../components/DefaultHeader.astro";
 import Footer from "../components/DefaultFooter.astro";
 
-let title = "Olivier Cardinaux, rue Chappe, Paris";
+let title = "Inspiration Olivier Cardinaux, rue Chappe, Paris";
 let description =
   "Le site de Olivier Cardinaux, créateur-concepteur de sites internet avec Kirby.";
 let permalink = "https://ruechappe.fr/";
-let current = "index";
+let current = "inspiration";
 ---
 
-<Html title={title} description={description} permalink={permalink} current={current}>
+<Html {title} {description} {permalink} {current}>
   <header class="full">
-    <nav id="sitenav">
-      <ul role="list">
-        <li>
-          <a href="/">index</a>
-        </li>
-        <li>
-          <a href="/inspirations">inspiration</a>
-        </li>
-      </ul>
-    </nav>
+    <Header />
   </header>
-    <div>
-    <Markdown>
-    # What do I sell?
+  <main>
+    <article>
+      <Markdown>
+        # What do I sell?
 
-    ## [Roots Digital Studio](https://rootsdigitalstudio.com/en/)
+        ## [Roots Digital Studio](https://rootsdigitalstudio.com/en/)
 
-      **We immerse ourselves from the ROOTS to make every digital project happen from start to finish.**
+        **We immerse ourselves from the ROOTS to make every digital project happen from start to finish.**
 
-      *We put the people in the center of everything we do with one goal in mind: create value for our clients. Every project has specific needs, and we identify and adapt to them, guiding and collaborating with clients throughout the design process.*
+        _We put the people in the center of everything we do with one goal in mind: create value for our clients. Every project has specific needs, and we identify and adapt to them, guiding and collaborating with clients throughout the design process._
 
-      * We believe in design as an active that helps us guarantee the success of digital products and services, that also help strengthen the brand consistency.
-      * Our 3 pillars: Strategy thinking - digital design - positioning
-      * We help brands and companies tackle their objectives understanding their problems and opportunities, executing and positioning their digital products and services perfectly.
-      * There are no tricks under the sleeve! This is our process. We immerse ourselves and research from the ROOTS, in order to ideate collaboratively a strategy with our clients, that will help us design and position properly the products and services needed.
+        - We believe in design as an active that helps us guarantee the success of digital products and services, that also help strengthen the brand consistency.
+        - Our 3 pillars: Strategy thinking - digital design - positioning
+        - We help brands and companies tackle their objectives understanding their problems and opportunities, executing and positioning their digital products and services perfectly.
+        - There are no tricks under the sleeve! This is our process. We immerse ourselves and research from the ROOTS, in order to ideate collaboratively a strategy with our clients, that will help us design and position properly the products and services needed.
 
-    ## [Skyward Digital](https://skyward.digital/)
+        ## [Skyward Digital](https://skyward.digital/)
 
-**Fast, reliable, headless websites**
+        **Fast, reliable, headless websites**
 
-*We combine the best Jamstack tools to design your perfect website that’s built for the future*
+        _We combine the best Jamstack tools to design your perfect website that’s built for the future_
 
-**Our services**
+        **Our services**
 
-  * Website auditing
+        - Website auditing
 
-  We spend all day making websites better, so we know how to find even hidden problems that might be holding you back. We'll review your website and give you a full breakdown of all the opportunities for improvement and show you which are most important to resolve.
+        We spend all day making websites better, so we know how to find even hidden problems that might be holding you back. We'll review your website and give you a full breakdown of all the opportunities for improvement and show you which are most important to resolve.
 
-  * Content strategy
+        - Content strategy
 
-  **Content powers the web**
+        **Content powers the web**
 
-  No matter what service you offer, you need to have strong content. We'll help you create a content strategy that will improve engagement, help more customers to convert and empower your business.
+        No matter what service you offer, you need to have strong content. We'll help you create a content strategy that will improve engagement, help more customers to convert and empower your business.
 
-  * UI/UX design
+        - UI/UX design
 
-  **More than just pretty designs**
+        **More than just pretty designs**
 
-  Thinking about UX is critical to successfully growing a business. You need to understand how your users think and make the best decisions for them. We use data and talk to real users to inform our designs and make sure you're heading in the right direction.
+        Thinking about UX is critical to successfully growing a business. You need to understand how your users think and make the best decisions for them. We use data and talk to real users to inform our designs and make sure you're heading in the right direction.
 
-  * Jamstack dev
+        - Jamstack dev
 
-  **Futureproof your website**
+        **Futureproof your website**
 
-  We always work with modern headless solutions to guarantee that you’re set up for the future so you don’t have to worry about if your platforms work together. Whether you're looking for marketing websites, ecommerce or SaaS, taking advantage of modern headless solutions will help your business grow.
+        We always work with modern headless solutions to guarantee that you’re set up for the future so you don’t have to worry about if your platforms work together. Whether you're looking for marketing websites, ecommerce or SaaS, taking advantage of modern headless solutions will help your business grow.
 
-  ## [Atomic Smash - WordPress and WooCommerce experts](https://www.atomicsmash.co.uk/)
+        ## [Atomic Smash - WordPress and WooCommerce experts](https://www.atomicsmash.co.uk/)
 
-  **We custom-build WordPress and WooCommerce platforms.**
+        **We custom-build WordPress and WooCommerce platforms.**
 
-  *Experiences that get better and better.*
+        _Experiences that get better and better._
 
-  We are busy improving ourselves
-  
-  Atomic Smash is built on the idea that your digital platform should never be finished. Instead, it must keep evolving, responding to the changing needs of your customers and your business.
+        We are busy improving ourselves
 
-  And we practice what we preach. That’s why we’re currently under the hood of our own site, pushing and pulling it to better reflect how we help solve the day-to-day challenges you face.
+        Atomic Smash is built on the idea that your digital platform should never be finished. Instead, it must keep evolving, responding to the changing needs of your customers and your business.
 
-  * Let’s buildsomething better together
-  * We partner with our clients.
+        And we practice what we preach. That’s why we’re currently under the hood of our own site, pushing and pulling it to better reflect how we help solve the day-to-day challenges you face.
 
-    </Markdown>
+        - Let’s buildsomething better together
+        - We partner with our clients.
+      </Markdown>
 
-    <Markdown>
-    # How does it work?
+      <Markdown>
+        # How does it work?
 
-    ## https://skyward.digital/
+        ## https://skyward.digital/
 
+        1. Book your Jamstack Discovery
+        1. Blueprints and Architecture
+        1. Development and Testing
+        1. Project Handover
 
-    1. Book your Jamstack Discovery
-    1. Blueprints and Architecture
-    1. Development and Testing
-    1. Project Handover
+        ## [Atomic Smash - WordPress and WooCommerce experts](https://www.atomicsmash.co.uk/)
 
-  ## [Atomic Smash - WordPress and WooCommerce experts](https://www.atomicsmash.co.uk/)
+        **Always evolving**
 
-  **Always evolving**
+        - Presented with unexpected challenges or new opportunities, what will your business do? It will pivot, adapt, evolve.
+        - To navigate successfully, a business must be open to change, and it’s the same for your digital platform. Progress shouldn’t stop at a website launch: that’s just the beginning.
+        - Always Evolving is more than a model, it’s the journey we take with our clients. We’ll stay by your side to help you reach your next destination.
+        - From small steps to great big strides, we’re optimising your site for commercial success little and often, so you can hit your goals, time and again.
+        - Always Evolving is a strategic alternative to building an entirely new website every couple of years.
 
-  * Presented with unexpected challenges or new opportunities, what will your business do? It will pivot, adapt, evolve.
-  * To navigate successfully, a business must be open to change, and it’s the same for your digital platform. Progress shouldn’t stop at a website launch: that’s just the beginning.
-  * Always Evolving is more than a model, it’s the journey we take with our clients. We’ll stay by your side to help you reach your next destination.
-  * From small steps to great big strides, we’re optimising your site for commercial success little and often, so you can hit your goals, time and again.
-  * Always Evolving is a strategic alternative to building an entirely new website every couple of years.
+        - Instead of starting over, wasting resources and causing an SEO dip, we’ll deliver monthly improvements, optimising for the best performance.
 
-  * Instead of starting over, wasting resources and causing an SEO dip, we’ll deliver monthly improvements, optimising for the best performance.
+        - You’ll get more value from your site and see greater return on investment.
 
-  * You’ll get more value from your site and see greater return on investment.
+        **Four steps to success**
 
-  **Four steps to success**
+        1. Identify problems
+        1. Propose solutions
+        1. Prototye and build
+        1. Launch improvements
 
-  1. Identify problems
-  1. Propose solutions
-  1. Prototye and build
-  1. Launch improvements
+        ## [&yet](https://andyet.com/)
 
-  ## [&yet](https://andyet.com/)
+        - High trust and collaboration - We appreciate flexiblity over process, and value kind, honest communication.
 
-* High trust and collaboration - We appreciate flexiblity over process, and value kind, honest communication.
+        - Share our work early and often - We want to get feedback quickly and early. This helps us to prioritize the right improvements and reduces the cost of speculative development.
 
-* Share our work early and often - We want to get feedback quickly and early. This helps us to prioritize the right improvements and reduces the cost of speculative development.
+        - Favor simplicity and sustainability - *We believe it’s clever not to be clever. Software should be dependable and low-maintenance.*
 
-* Favor simplicity and sustainability - **We believe it’s clever not to be clever. Software should be dependable and low-maintenance.**
+        - Use the right tool for the job - While we have favorite languages and libraries, we reach for the tools that make the most sense for your project.
 
-* Use the right tool for the job - While we have favorite languages and libraries, we reach for the tools that make the most sense for your project.
+        - Our designers and developers can be trusted to take a holistic view of your project, and to work with you to make choices that support your bigger vision. Everyone at &yet, regardless of their core competency, has a strong design sensibility and the coding skills to dovetail seamlessly with your team.
+ 
+        ## [Platform Seven — Make your mark on the world](https://platform-seven.com/)
 
-## [Platform Seven — Make your mark on the world](https://platform-seven.com/)
-
-* WHAT WE DO
-* HOW WE WORK
-* WHO WE HELP
-* OUR APPROACH OUR 4 STEP PROCESS
-* WHAT WE OFFER
-* ABOUT US
-
-
-    </Markdown>
-
-    </div>
-
-    <footer class="full">
-      <Footer />
-    </footer>
+        - WHAT WE DO
+        - HOW WE WORK
+        - WHO WE HELP
+        - OUR APPROACH OUR 4 STEP PROCESS
+        - WHAT WE OFFER
+        - ABOUT US
+      </Markdown>
+    </article>
+  </main>
+  <footer class="full">
+    <Footer />
+  </footer>
 </Html>
 
 <style lang="scss">
+  body {
+    --highlight-color: var(--green-4);
+    --surface-1: var(--o6red-1);
+  }
+
   div {
     grid-column: 2 / -2;
   }

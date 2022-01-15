@@ -13,51 +13,73 @@ let current = "index";
 ---
 
 <Html {title} {description} {permalink} {current}>
-  <header class="full">
-    <nav id="sitenav">
-      <ul role="list">
-        <li>
-          <a href="/">index</a>
-        </li>
-        <li>
-          <a href="/inspirations">inspiration</a>
-        </li>
-      </ul>
-    </nav>
+  <header>
+    <Header />
   </header>
-  <div>
-    <Markdown>
-      # Contents
+  <main>
+    <article>
+      <!-- INFO: 
+      Ce que je fais : des sites sur-mesure, càd ... ?
+    -->
+      <p>
+        <strong
+          >Je conçois, réalise et accompagne des sites web sur mesure.</strong
+        >
+      </p>
+      <dl class="tasks">
+        <dt>Conception</dt>
+        <dd>
+          <p>Je fais ça, oui.</p>
+          <p>
+            On part des contenus. Non. On commence pas savoir quoi mettre, où, et comment.
+          </p>
+          <p>
+            Des sites selon ce que vous voulez y mettre. Pas remplir des cases prédéfinies, mais définir les cases selon ce que vous avez à mettre. <em>Toute la différence est là !</em>
+          </p>
+        </dd>
+        <dt>Réalisation</dt>
+        <dd>
+          <p>De préférence, et si ça correspond, j'utilise Kirby.</p>
+          <p>
+            Je crois qu'il est malin de ne pas essayer d'être trop malin. Un site web est un logiciel qui doit être fiable et résistant. J'utilise des technologies éprouvées et durables.
+          </p>
+          <p>Étant indépendant de toutes plateformes sur abonnement et d'évolutions incontrôlées, on garde la maîtrise.</p>
+            </dd>
+        <dt>Évolution</dt>
+        <dd>
+          <p>Ce qui mène au point suivant : l'accompagnement et l'évolution du site.</p>
+          <p>
+            Pour la modique somme de 1000 € pas mois, je prie pour vous.
+          </p>
+        </dd>
+      </dl>
+      <p>Sinon, ça va bien, merci. Je voulais aussi dire que j'ai un faible pour les artistes et associations. N'hésitez pas à me demander si je peux vous faire un prix.</p>
+      <!-- INFO: Liberté en dehors, en plus, à côté des réseaux sociaux -->
+      <!-- INFO: Pas une vision technique mais focalisée sur votre projet et vos contenus -->
+    </article>
+  </main>
 
-      Ici je parle de mon offre, ce que je fais, propose, etc. Keçadir ?
-
-      ## offre
-
-      Je crée des sites internet pour le plaisir, la beauté du geste. Mais ça doit être utile, aussi. Ce n'est pas que de l'art pour l'art. Quoi que c'est ce qui me plaît, pour être parfaitement honnête.
-
-      Mais il faut que je gagne de l'argent, j'en ai besoin. Je ne peux pas faire sans, en réalité. Pas besoin de beaucoup, mais un petit peu, ça serait pas mal, en réalité.
-
-      - sites internet
-      - autres choses ?
-
-      ## moi
-
-      - Qui suis-je ?
-      - Pourquoi devrait-on me faire confiance ?
-    </Markdown>
-  </div>
-
-  <footer class="full">
+  <footer>
     <Footer />
   </footer>
 </Html>
 
 <style lang="scss">
-  div {
-    grid-column: 2 / -2;
+  body {
+    --highlight-color: var(--red-4);
+    --surface-1: var(--o6yellow-1);
   }
 
-  p + p {
-    margin-top: 1rem;
+  .tasks {
+    display: grid;
+
+    dt {
+      font-weight: var(--font-weight-6);
+      padding-top: var(--size-4);
+
+      &::before {
+        content: "😉";
+      }
+    }
   }
 </style>
