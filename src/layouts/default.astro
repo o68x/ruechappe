@@ -11,9 +11,11 @@ const { title, description, permalink, current } = Astro.props
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400..900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Piazzolla:wght@400..900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@75..125,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/style/modern_reset.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css"/> -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/open-props"/> -->
     <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/global.scss')}>
     <script type="module" src={Astro.resolve('../js/index.js')} defer></script>
@@ -48,9 +50,19 @@ body {
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(var(--vw12), maxcontent);
   gap: var(--size-fluid-3);
+  background-color: var(--surface-1);
 
-  & > * {
+  & > :global(*) {
     grid-column: 2 / -2;
+  }
+
+  & > :global(header) {
+    grid-column: 1 / -1;
+  }
+
+  & > :global(footer) {
+    grid-column: 1 / -1;
+    align-self: end;
   }
 
   & > .full {
@@ -73,10 +85,6 @@ body {
 
   & > .right {
     grid-column: -8 / -2;
-  }
-
-  > :global(footer) {
-    align-self: end;
   }
 }
 </style>
